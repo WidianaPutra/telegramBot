@@ -26,6 +26,7 @@ bot.on("message", async (callback) => {
     let content = text.replace("?chat", "").trim();
 
     if (content.length > 0) {
+      bot.sendMessage(id, "Memproses.....");
       const response = await axios.post(
         `${process.env.BASE_URL_AI_API}/chat?key=${process.env.API_KEY}`,
         {
