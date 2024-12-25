@@ -41,6 +41,6 @@ bot.on("message", async (callback) => {
       return bot.sendMessage(id, response.data.message[1].content);
     }
   } else {
-    return;
+    return bot.sendMessage(id, botMenu);
   }
 });
